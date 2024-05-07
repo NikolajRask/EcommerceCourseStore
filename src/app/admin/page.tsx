@@ -60,7 +60,7 @@ const page = async () => {
 
             <DashboardCard title="Customers" subtitle={`${formatCurrency(userData.averageValuePerUser)} Average Value`} body={formatNumber(userData.userCount)}></DashboardCard>
 
-            <DashboardCard title="Active Products" subtitle={`${formatNumber(productData.activeProducts)} Inactive Procucts`} body={formatNumber(productData.inactiveProducts)}></DashboardCard>
+            <DashboardCard title="Active Products" subtitle={`${formatNumber(productData.inactiveProducts)} Inactive Procucts`} body={formatNumber(productData.activeProducts)}></DashboardCard>
         </div>
     )
 }
