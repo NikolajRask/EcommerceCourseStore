@@ -1,5 +1,5 @@
 import { formatCurrency } from '@/lib/formatters'
-import { Column, Row, Section, Text, Img } from '@react-email/components'
+import { Column, Row, Section, Text, Img, Button } from '@react-email/components'
 import React from 'react'
 
 type OrderInformationProps = {
@@ -42,6 +42,14 @@ export default function OrderInformation({ order, product, downloadVerificationI
             <Row className="mt-8">
                 <Column className="align-bottom">
                     <Text className="text-lg font-bold m-0 mr-4">{product.name}</Text>
+                </Column>
+                <Column align="right">
+                    <Button href={`${process.env.NEXT_PUBLIC_SERVER_URL}/products/download/${downloadVerificationId}`} className="bg-black text-white px-6 py-4 rounded text-large">Download</Button>
+                </Column>
+            </Row>
+            <Row>
+                <Column>
+                    <Text className="line-clamp-5 text-gray-600 mb-0">{product.description}</Text>
                 </Column>
             </Row>
         </Section>
